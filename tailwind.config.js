@@ -78,6 +78,9 @@ module.exports = {
           success: '#0DA200',
         },
       },
+      fontFamily: {
+        DM_Sans: ['DM_Sans'],
+      },
     },
   },
   plugins: [],
