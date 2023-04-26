@@ -1,7 +1,7 @@
 export enum StepTypes {
-  first = 'first',
-  second = 'second',
-  third = 'third',
+  first = 1,
+  second = 2,
+  third = 3,
 }
 
 export interface IBackgroundProps {

@@ -18,6 +18,8 @@ module.exports = {
           400: '#FF4C8B',
           450: '#FF367D',
           500: '#FF1F6E',
+          550: '#840B70',
+          600: '#A3365C',
         },
         bluebonnet: {
           50: '#E7EAFF',
@@ -30,6 +32,7 @@ module.exports = {
           400: '#3C50FC',
           450: '#243AFC',
           500: '#FF1F6E',
+          550: '#313EB1',
         },
         'yellow-sun': {
           50: '#FFFDE9',
@@ -80,6 +83,9 @@ module.exports = {
       },
       fontFamily: {
         DM_Sans: ['DM_Sans'],
+      },
+      height: {
+        '85%': '85%',
       },
     },
   },
