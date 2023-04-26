@@ -84,6 +84,7 @@ module.exports = {
       fontFamily: {
         DM_Sans: ['DM_Sans'],
         Helvetica_Now: ['Helvetica Now'],
+        Tanker: ['Tanker'],
       },
       height: {
         '85%': '85%',
