@@ -20,6 +20,8 @@ module.exports = {
           500: '#FF1F6E',
           550: '#840B70',
           600: '#A3365C',
+          650: '#ffb2cd',
+          700: '#ff97ee',
         },
         bluebonnet: {
           50: '#E7EAFF',
@@ -33,6 +35,7 @@ module.exports = {
           450: '#243AFC',
           500: '#FF1F6E',
           550: '#313EB1',
+          600: '#b1b9ff',
         },
         'yellow-sun': {
           50: '#FFFDE9',

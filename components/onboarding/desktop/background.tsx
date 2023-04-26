@@ -106,9 +106,9 @@ const OnboardingBackground = ({ step, next, prev }: IBackgroundProps) => {
   return (
     <div
       className={classNames('absolute w-full h-full', {
-        'bg-electric-pink-200': step === _s.first,
-        'bg-bluebonnet-250': step === _s.second,
-        'bg-electric-pink-250': step === _s.third,
+        'bg-electric-pink-650': step === _s.first,
+        'bg-bluebonnet-600': step === _s.second,
+        'bg-electric-pink-700': step === _s.third,
       })}>
       <div className={styles.background}>
         <Logo />
