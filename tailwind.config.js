@@ -87,6 +87,10 @@ module.exports = {
       },
       height: {
         '85%': '85%',
+        button: '52px',
+      },
+      minWidth: {
+        button: '165.5px',
       },
     },
   },

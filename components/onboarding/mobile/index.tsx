@@ -1,6 +1,6 @@
 const MobileOnboarding = () => {
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <h1>Mobile Onboarding</h1>
     </div>
   );

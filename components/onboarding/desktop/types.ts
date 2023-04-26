@@ -6,4 +6,6 @@ export enum StepTypes {
 
 export interface IBackgroundProps {
   step: StepTypes;
+  next: () => void;
+  prev?: () => void;
 }

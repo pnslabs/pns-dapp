@@ -9,6 +9,8 @@ import {
   UsdIcon,
 } from '@/public/icons';
 import { IBackgroundProps, StepTypes } from './types';
+import { PNSButton } from '@/components/UI';
+import { BtnVariant } from '@/components/UI/PNS_Button/types';
 
 const FirstStepContent = () => {
   return (
@@ -94,7 +96,7 @@ const components = [
   <ThirdStepContent key={2} />,
 ];
 
-const OnboardingBackground = ({ step }: IBackgroundProps) => {
+const OnboardingBackground = ({ step, next, prev }: IBackgroundProps) => {
   return (
     <div
       className={classNames('absolute w-full h-full', {
@@ -129,7 +131,29 @@ const OnboardingBackground = ({ step }: IBackgroundProps) => {
 
             {components[step - 1]}
           </div>
-          <div className="h-85% col-span-2"></div>
+          <div className="h-85% col-span-2 flex flex-col justify-between">
+            <div></div>
+            <div className="flex justify-end items-center gap-2">
+              <div className={classNames({ hidden: step === StepTypes.first })}>
+                <PNSButton
+                  key={0}
+                  text={'Back'}
+                  variant={BtnVariant.outline}
+                  on_click={prev}
+                />
+              </div>
+              <PNSButton
+                on_click={next}
+                key={1}
+                text={'Take me in!'}
+                variant={
+                  step === StepTypes.first
+                    ? BtnVariant.tertiary
+                    : BtnVariant.primary
+                }
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
