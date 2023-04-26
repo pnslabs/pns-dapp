@@ -57,7 +57,7 @@ export default function DesktopOnboarding() {
   };
 
   return (
-    <div className="hidden w-screen h-screen bg-rich-black-500 overflow-hidden relative lg:flex justify-center items-center">
+    <div className="hidden font-Helvetica_Now w-screen h-screen bg-rich-black-500 overflow-hidden relative lg:flex justify-center items-center">
       <AnimatePresence mode="popLayout" initial={false} custom={direction}>
         <motion.div
           key={page}

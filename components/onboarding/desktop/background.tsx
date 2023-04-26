@@ -1,7 +1,13 @@
 import classNames from 'classnames';
 
 import styles from './desktop.module.css';
-import { EthIcon, Logo, UsdIcon } from '@/public/icons';
+import {
+  EthIcon,
+  EthPrimaryIcon,
+  HappyFaceIcon,
+  Logo,
+  UsdIcon,
+} from '@/public/icons';
 import { IBackgroundProps, StepTypes } from './types';
 
 const FirstStepContent = () => {
@@ -18,7 +24,7 @@ const FirstStepContent = () => {
         </div>
         <div className="relative py-2">
           <div>YOUR</div>
-          <div className="absolute right-14 -top-2">
+          <div className="absolute right-12 top-0">
             <EthIcon />
           </div>
         </div>
@@ -38,14 +44,14 @@ const SecondStepContent = () => {
       <div className={styles.title}>
         <div className="relative">
           <div>DEFI</div>
-          <div className="absolute -top-4 right-28">
+          <div className="absolute -top-3 right-24">
             <UsdIcon />
           </div>
         </div>
         <div className="relative py-2">
           <div>MADE</div>
-          <div className="absolute right-10 -top-2">
-            <EthIcon />
+          <div className="absolute -right-2 -top-4">
+            <HappyFaceIcon />
           </div>
         </div>
         <div>EASSSY!</div>
@@ -65,11 +71,11 @@ const ThirdStepContent = () => {
       <div className={styles.title}>
         <div className="relative">
           <div>SENT</div>
-          <div className="absolute -top-4 right-20">
-            <UsdIcon />
+          <div className="absolute -top-2 right-12">
+            <EthPrimaryIcon />
           </div>
         </div>
-        <div className="py-2">3 ETH TO</div>
+        <div className="py-2 whitespace-nowrap">3 ETH TO</div>
         <div>+971-23</div>
       </div>
 
@@ -123,7 +129,7 @@ const OnboardingBackground = ({ step }: IBackgroundProps) => {
 
             {components[step - 1]}
           </div>
-          <div className="h-85% bg-black col-span-2"></div>
+          <div className="h-85% col-span-2"></div>
         </div>
       </div>
     </div>

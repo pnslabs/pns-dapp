@@ -59,6 +59,50 @@
   font-style: italic;
 }
 
+/* Helvetica Now */
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-ExtLt.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Helvetica Now';
+    src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
