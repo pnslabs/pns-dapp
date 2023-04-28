@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 
 import styles from './desktop.module.css';
 import {
@@ -13,7 +14,6 @@ import {
 import { IBackgroundProps, StepTypes } from './types';
 import { PNSButton } from '@/components/UI';
 import { BtnVariant } from '@/components/UI/PNS_Button/types';
-import Image from 'next/image';
 import { HappyFace1, HappyFace2 } from '@/public/images';
 
 const FirstStepContent = () => {
