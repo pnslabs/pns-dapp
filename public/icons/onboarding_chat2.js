@@ -10,7 +10,7 @@ const SecondOnboardingChat = () => {
         d="M584.33 120.372C585.045 115.541 591.864 115.149 593.128 119.866L604.206 161.208C605.102 164.554 602.04 167.616 598.694 166.719L556.243 155.344C551.565 154.091 551.897 147.345 556.676 146.558L575.651 143.431C578.867 142.901 581.373 140.354 581.85 137.129L584.33 120.372Z"
         fill="white"
         stroke="black"
-        stroke-width="3"
+        strokeWidth="3"
       />
       <rect x="1.5" y="1.5" width="569" height="131" rx="21.5" fill="white" />
       <path
@@ -24,7 +24,7 @@ const SecondOnboardingChat = () => {
         height="131"
         rx="21.5"
         stroke="black"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </svg>
   );
