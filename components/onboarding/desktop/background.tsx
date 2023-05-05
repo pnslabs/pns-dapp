@@ -7,13 +7,13 @@ import {
   EthPrimaryIcon,
   FirstOnboardingChat,
   HappyFaceIcon,
-  Logo,
   SecondOnboardingChat,
   UsdIcon,
 } from '@/public/icons';
 import { IBackgroundProps, StepTypes } from './types';
-import { PNSButton } from '@/components/UI';
+import { PNSButton, PNSLogo } from '@/components/UI';
 import { BtnVariant } from '@/components/UI/PNS_Button/types';
+import { LogoVariant } from '@/components/UI/PNS_Logo/types';
 import { HappyFace1, HappyFace2 } from '@/public/images';
 
 const FirstStepContent = () => {
@@ -103,6 +103,7 @@ const components = [
 const OnboardingBackground = ({ step, next, prev }: IBackgroundProps) => {
   const _s = StepTypes;
   const _b = BtnVariant;
+  const _l = LogoVariant;
   return (
     <div
       className={classNames('absolute w-full h-full', {
@@ -111,7 +112,7 @@ const OnboardingBackground = ({ step, next, prev }: IBackgroundProps) => {
         'bg-electric-pink-700': step === _s.third,
       })}>
       <div className={styles.background}>
-        <Logo />
+        <PNSLogo variant={_l.secondary} />
         <div className="mt-11 grid grid-cols-3 h-full">
           <div className="h-85% flex flex-col justify-end">
             <div
