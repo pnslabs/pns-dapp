@@ -14,21 +14,6 @@ import { PNSButton, PNSLogo } from '@/components/UI';
 import { BtnVariant } from '@/components/UI/PNS_Button/types';
 import { LogoVariant } from '@/components/UI/PNS_Logo/types';
 
-const ProgressBar = () => {
-  return (
-    <div
-      className={`bg-[#ffffff3d] flex justify-items-start items-stretch overflow-hidden ${styles.progress__bar}`}>
-      <motion.div
-        className="w-0 bg-white"
-        animate={{
-          width: '100%',
-        }}
-        transition={{ duration: 4 }}
-      />
-    </div>
-  );
-};
-
 const FirstStepContent = () => {
   return (
     <div>
@@ -43,7 +28,7 @@ const FirstStepContent = () => {
           <EthMobileIcon />
         </div>
       </div>
-      <p className={`w-[252px] text-white ${styles.text}`}>
+      <p className={`w-[252px] text-white ${styles.text} md:w-80`}>
         Send & receive crypto flawlessly using your mobile phone number.
       </p>
     </div>
@@ -57,14 +42,14 @@ const SecondStepContent = () => {
         <div className={`text-[#D8DCFF] ${styles.title}`}>
           DEFI MADE EASSSY!
         </div>
-        <div className="absolute top-0 right-14 ">
+        <div className="absolute top-0 right-16 md:right-28">
           <UsdIconMobile />
         </div>
-        <div className="absolute top-[85px] -right-6 ">
+        <div className="absolute top-[85px] -right-4 md:right-9 ">
           <HappyFaceIcon />
         </div>
       </div>
-      <p className={`w-[296px] text-white ${styles.text}`}>
+      <p className={`w-[296px] text-white ${styles.text} md:w-96`}>
         Interact with non-custodial wallets and dApps easily with your phone
         number.
       </p>
@@ -79,11 +64,11 @@ const ThirdStepContent = () => {
         <div className={`text-electric-pink-550 ${styles.title}`}>
           SENT <br /> 3 ETH TO +971-23.
         </div>
-        <div className="absolute top-0 right-10 ">
+        <div className="absolute top-0 right-11 md:right-24 ">
           <EthPrimaryIcon />
         </div>
       </div>
-      <p className={`w-[316px] text-black ${styles.text}`}>
+      <p className={`w-[316px] text-black ${styles.text} md:w-96`}>
         Tether your addresses to your mobile number and start trading
         seamlessly.
       </p>
@@ -110,16 +95,20 @@ const OnboardingBackground = ({ step }: IBackgroundProps) => {
         'bg-[#FF97EE]': step === _s.third,
       })}>
       <div className="relative h-full flex flex-col items-center">
-        <div className=" w-full flex justify-center items-center gap-2.5 mt-14 mb-7 ">
-          {components.map((item, index) => (
-            <div key={index}>
+        <div className=" w-full flex justify-center items-center gap-2.5 mt-14 mb-7 md:gap-3">
+          {components.map((_, index) => (
+            <div key={index} className={styles.progress__bar}>
               {index === step - 1 ? (
-                <ProgressBar />
+                <motion.div
+                  style={{ backgroundColor: '#fff' }}
+                  initial={{ width: 0 }}
+                  animate={{ width: '100%' }}
+                  transition={{ duration: 4 }}
+                />
               ) : (
                 <div
-                  className={classNames(`${styles.progress__bar}`, {
+                  className={classNames('w-full', {
                     'bg-white': step - 1 > index,
-                    'bg-[#ffffff3d] ': step - 1 < index,
                   })}
                 />
               )}
@@ -130,8 +119,8 @@ const OnboardingBackground = ({ step }: IBackgroundProps) => {
           <PNSLogo variant={_l.primary} />
           <div className="mt-10 ">{components[step - 1]}</div>
         </div>
-        {step === StepTypes.third && (
-          <div className="absolute top-[736px] left-[208px]">
+        {step === _s.third && (
+          <div className="absolute top-[736px] left-52 md:left-60">
             <PNSButton text={'Done'} variant={_b.secondary} />
           </div>
         )}
