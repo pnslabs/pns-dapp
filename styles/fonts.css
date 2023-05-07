@@ -1,0 +1,113 @@
+
+/* DM_SANS */
+@font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-MediumItalic.ttf");
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "DM_Sans";
+    src: url("../fonts/DM_Sans/DMSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  /* Helvetica Now */
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-ExtLt.ttf');
+      font-weight: 200;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Light.ttf');
+      font-weight: 300;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Regular.ttf');
+      font-weight: 400;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Medium.ttf');
+      font-weight: 500;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Bold.ttf');
+      font-weight: bold;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-ExtraBold.ttf');
+      font-weight: 800;
+      font-style: normal;
+  }
+  @font-face {
+      font-family:'Helvetica Now';
+      src: url('../fonts/HelveticaNow/HelveticaNowDisplay-Black.ttf');
+      font-weight: 900;
+      font-style: normal;
+  }
+
+
+  /* Tanker */
+@font-face {
+    font-family:'Tanker';
+    src: url('../fonts/Tanker/Tanker-Regular.eot');
+    src: url('../fonts/Tanker/Tanker-Regular.ttf');
+    src: url('../fonts/Tanker/Tanker-Regular.woff');
+    src: url('../fonts/Tanker/Tanker-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
