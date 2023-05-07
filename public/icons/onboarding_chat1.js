@@ -10,7 +10,7 @@ const FirstOnboardingChat = () => {
         d="M336.665 61.7442C337.022 59.3285 340.432 59.1324 341.064 61.4912L346.603 82.162C347.051 83.8351 345.52 85.366 343.847 84.9177L322.621 79.2303C320.282 78.6035 320.448 75.2306 322.838 74.8369L332.325 73.2736C333.933 73.0086 335.186 71.735 335.425 70.1225L336.665 61.7442Z"
         fill="white"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <rect
         x="1.25"
@@ -31,7 +31,7 @@ const FirstOnboardingChat = () => {
         height="65.5"
         rx="10.75"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );
