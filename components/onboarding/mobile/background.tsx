@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from './mobile.module.css';
+import { IBackgroundProps, StepTypes } from './types';
 import {
   EthMobileIcon,
   EthPrimaryIcon,
@@ -9,7 +10,6 @@ import {
   UsdIconMobile,
   UsdPrimaryIcon,
 } from '@/public/icons';
-import { IBackgroundProps, StepTypes } from './types';
 import { PNSButton, PNSLogo } from '@/components/UI';
 import { BtnVariant } from '@/components/UI/PNS_Button/types';
 import { LogoVariant } from '@/components/UI/PNS_Logo/types';
@@ -98,32 +98,38 @@ const OnboardingBackground = ({ step }: IBackgroundProps) => {
         <div className=" w-full flex justify-center items-center gap-2.5 mt-14 mb-7 md:gap-3">
           {components.map((_, index) => (
             <div key={index} className={styles.progress__bar}>
-              {index === step - 1 ? (
+              <AnimatePresence initial={true}>
                 <motion.div
                   style={{ backgroundColor: '#fff' }}
                   initial={{ width: 0 }}
                   animate={{ width: '100%' }}
                   transition={{ duration: 4 }}
-                />
-              ) : (
-                <div
-                  className={classNames('w-full', {
-                    'bg-white': step - 1 > index,
+                  className={classNames({
+                    hidden: index !== step - 1,
                   })}
                 />
-              )}
+              </AnimatePresence>
+              <div
+                className={classNames('w-full', {
+                  'bg-white': step - 1 > index!,
+                  hidden: index === step - 1,
+                })}
+              />
             </div>
           ))}
         </div>
+
         <div className="flex flex-col items-start px-7">
           <PNSLogo variant={_l.primary} />
           <div className="mt-10 ">{components[step - 1]}</div>
         </div>
-        {step === _s.third && (
-          <div className="absolute top-[736px] left-52 md:left-60">
-            <PNSButton text={'Done'} variant={_b.secondary} />
-          </div>
-        )}
+
+        <div
+          className={classNames('absolute top-[736px] left-52 md:left-60', {
+            hidden: step !== _s.third,
+          })}>
+          <PNSButton text={'Done'} variant={_b.secondary} />
+        </div>
       </div>
     </div>
   );

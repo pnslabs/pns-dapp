@@ -5,24 +5,14 @@ import { wrap } from 'popmotion';
 import OnboardingBackground from './background';
 import { StepTypes } from './types';
 
+const components = [
+  <OnboardingBackground step={StepTypes.first} key={0} />,
+  <OnboardingBackground step={StepTypes.second} key={1} />,
+  <OnboardingBackground step={StepTypes.third} key={2} />,
+];
+
 const MobileOnboarding = () => {
   const [pageIndex, setPageIndex] = useCycle(0, 1, 2);
-
-  useEffect(() => {
-    const autoTransitionTimer = setInterval(() => {
-      if (pageIndex < 2) setPageIndex((pageIndex + 1) % 3);
-    }, 4000);
-
-    return () => {
-      clearInterval(autoTransitionTimer);
-    };
-  }, [pageIndex, setPageIndex]);
-
-  const components = [
-    <OnboardingBackground step={StepTypes.first} key={0} />,
-    <OnboardingBackground step={StepTypes.second} key={1} />,
-    <OnboardingBackground step={StepTypes.third} key={2} />,
-  ];
 
   const componentIndex = wrap(0, components.length, pageIndex);
 
@@ -37,6 +27,16 @@ const MobileOnboarding = () => {
       setPageIndex((pageIndex + 1) % 3);
     }
   };
+
+  useEffect(() => {
+    const autoTransitionTimer = setInterval(() => {
+      if (pageIndex < 2) setPageIndex((pageIndex + 1) % 3);
+    }, 4000);
+
+    return () => {
+      clearInterval(autoTransitionTimer);
+    };
+  }, [pageIndex, setPageIndex]);
 
   return (
     <div className="xl:hidden font-Helvetica_Now w-screen h-screen bg-rich-black-500 overflow-hidden relative">
